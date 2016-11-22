@@ -1,0 +1,30 @@
+<p>
+  Welcome Admin !
+</p>
+<hr>
+<p>Click below button to get the student details</p>
+<button type="button" class="btn-default btn" (click)="getdata()">Get</button>
+<br><br>
+<h3>Student's Details</h3>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Student Id</th>
+      <th>Student Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let input of rdata">
+      <td>{{input.sid}}</td>
+      <td>{{input.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<br><hr>
+<p>
+  <a [routerLink] = "['']">Logout</a>
+</p>
+
